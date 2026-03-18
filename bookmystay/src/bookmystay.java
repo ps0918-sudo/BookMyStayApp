@@ -1,13 +1,28 @@
 public class bookmystay {
     public static void main(String[] args) {
 
-        // Display welcome message
-        System.out.println("Welcome to the Hotel Booking Management System");
+        // Create room objects
+        Room singleRoom = new SingleRoom();
+        Room doubleRoom = new DoubleRoom();
+        Room suiteRoom = new SuiteRoom();
 
-        // Display system initialization message
-        System.out.println("System initialized successfully.");
+        // Static availability (simple variables)
+        int singleAvailable = 5;
+        int doubleAvailable = 3;
+        int suiteAvailable = 2;
 
-        // Display application version
-        System.out.println("Application Version: 1.0");
+        System.out.println("Hotel Room Initialization");
+
+        System.out.println("\nSingle Room:");
+        singleRoom.displayRoomDetails();
+        System.out.println("Available: " + singleAvailable);
+
+        System.out.println("\nDouble Room:");
+        doubleRoom.displayRoomDetails();
+        System.out.println("Available: " + doubleAvailable);
+
+        System.out.println("\nSuite Room:");
+        suiteRoom.displayRoomDetails();
+        System.out.println("Available: " + suiteAvailable);
     }
 }
